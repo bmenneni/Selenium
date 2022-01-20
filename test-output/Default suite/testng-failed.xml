@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.LoginHerokuTest">
+      <class name="tests.AmazonTest">
         <methods>
-          <include name="loginTestPOM"/>
+          <include name="setUp"/>
+          <include name="amazonSearch"/>
         </methods>
-      </class> <!-- tests.LoginHerokuTest -->
+      </class> <!-- tests.AmazonTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

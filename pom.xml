@@ -4,7 +4,7 @@
   <artifactId>bmenselenium</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <dependencies>
+ <dependencies>
   
   		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -18,7 +18,7 @@
 		    <groupId>org.testng</groupId>
 		    <artifactId>testng</artifactId>
 		    <version>6.14.3</version>
-		    <scope>test</scope>
+		    
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
@@ -26,7 +26,7 @@
 		    <groupId>io.cucumber</groupId>
 		    <artifactId>cucumber-junit</artifactId>
 		    <version>7.1.0</version>
-		    <scope>test</scope>
+		    
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
@@ -57,6 +57,46 @@
 		    <artifactId>gherkin</artifactId>
 		    <version>22.0.0</version>
 		</dependency>
-  
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>3.16</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>3.16</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+		<dependency>
+		    <groupId>com.relevantcodes</groupId>
+		    <artifactId>extentreports</artifactId>
+		    <version>2.41.2</version>
+		</dependency>
+		
   </dependencies>
+  
+   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M5</version>
+			<configuration>
+				<suiteXmlFiles>
+					<suiteXmlFile>testng.xml</suiteXmlFile>
+				</suiteXmlFiles>
+			</configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <sourceDirectory>${basedir}/src</sourceDirectory>
+            <testSourceDirectory>${basedir}/test</testSourceDirectory>
+  		</build>    
 </project>
